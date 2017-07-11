@@ -13,7 +13,7 @@ Test Automation using Ruby with capybara, cucumber and rspec. The repository con
 git clone https://github.com/kiriloman/cucumber
 ```
 
-Now just pick a folder, navigate to ***folder/cucumber*** and run tests:
+Now just pick a folder, navigate to ***folder/cucumber/*** and run tests:
 
 ```
 cucumber
