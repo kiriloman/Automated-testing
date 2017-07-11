@@ -10,7 +10,7 @@ end
 When(/^fill in the fields$/) do
   within '.questions' do
     fill_in 'DisplayName', with: 'KYS'
-    fill_in 'Email', with: 'ky19283120@gmail.com'
+    fill_in 'Email', with: 'iaz6884sd2@tqosi.com'
     fill_in 'password_password', with: 'kysOLX123'
     fill_in 'zipCode', with: '2879-022'
     fill_in 'telephoneNumber', with: '912543122'
@@ -30,7 +30,7 @@ When(/^click on Completar Registo$/) do
 end
 
 Then(/^my registration should be successfully completed$/) do
-  page.has_css?('.confirmationArea', :text => 'ky19283120@gmail.com', :visible => 'true')
+  page.has_css?('.confirmationArea', :text => 'iaz68842sd@tqosi.com', :visible => 'true')
   expect(page).to have_css '.confirmationArea'
 
   @teste = "Kyrylo"

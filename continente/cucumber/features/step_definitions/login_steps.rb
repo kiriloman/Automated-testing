@@ -1,15 +1,20 @@
 Given(/^I access Continente website&/) do
-
+  visit "https://www.continente.pt"
 end
 
 When(/^I fill in email and password fields with registered credentials$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  within '.loginArea' do
+    fill_in 'username', with: 'iaz68842@tqosi.com'
+    fill_in 'password', with: 'kysOLX123'
+  end
 end
 
 When(/^click Entrar$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  within '.loginArea' do
+    find(:css, '#btnLogin').click
+  end
 end
 
 Then(/^I should be successfully logged in$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_css '#myAccountLogin'
 end
