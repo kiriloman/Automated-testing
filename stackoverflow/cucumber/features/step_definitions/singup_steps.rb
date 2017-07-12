@@ -18,7 +18,7 @@ end
 
 When(/^click on Sign Up$/) do
   within '#controls-row' do
-    find(:css, '#submit-button')
+    find(:css, '#submit-button').click
   end
 end
 
