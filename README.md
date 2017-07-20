@@ -8,10 +8,12 @@ Test Automation using Ruby with some shiny gems. The repository consists of a fe
 2. cucumber
 3. selenium-webdriver
 4. rspec
+5. site_prism
+6. faker
 
 ## Usage
 ```
-git clone https://github.com/kiriloman/cucumber
+git clone https://github.com/kiriloman/Automated-testing
 ```
 
 Now just pick a folder, navigate to ***folder/cucumber/*** and run tests:
