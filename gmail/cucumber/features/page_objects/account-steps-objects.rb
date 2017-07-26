@@ -10,7 +10,6 @@ class CreateAccount
       find(:xpath, '//div[@jsname="bCkDte"]').click
       find(:xpath, '//content[@aria-label="Create account"]').click
       find(:xpath, '//content[@aria-label="Create account"]').click
-
     end
 
     def fill_fields
