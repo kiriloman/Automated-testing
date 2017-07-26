@@ -5,9 +5,17 @@ machine:
     - docker
 dependencies:
   post:
-    - mkdir drivers
-    - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz && tar -zxvf geckodriver-v0.11.1-linux64.tar.gz:
-        pwd: drivers
+    - sudo apt-get install libxss1 libappindicator1 libindicator7
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome*.deb
+    - sudo apt-get install -f
+    - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+    - sudo apt-get install jq nodejs curl -qy
+    - npm install -g geckodriver
+    - npm install -g chromedriver@2.30
+    - npm install -g chromedriver
+    - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    - curl -sSL https://get.rvm.io | bash -s stable
   override:
     - rvm use .
     - gem install bundler
