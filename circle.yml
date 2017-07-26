@@ -8,7 +8,6 @@ dependencies:
     - sudo apt-get update
     - sudo apt-get install firefox
     - npm install -g geckodriver
-    - npm install -g mozilladriver
   override:
     - rvm use .
     - gem install bundler
