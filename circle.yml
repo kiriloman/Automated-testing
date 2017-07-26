@@ -1,0 +1,13 @@
+machine:
+ ruby:
+   version: ruby-2.3.3
+ services:
+   - docker
+dependencies:
+ override:
+   - rvm use .
+   - gem install bundler
+   - cd gmail/cucumber; bundle install
+test:
+ override:
+   - cd gmail/cucumber; cucumber --tags @create_gmail_account

@@ -1,4 +1,3 @@
-require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'cucumber'
