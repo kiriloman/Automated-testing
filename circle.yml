@@ -8,6 +8,7 @@ dependencies:
    - sudo apt-get update
    - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
    - sudo apt-get install jq nodejs curl -qy
+   - npm install -g geckodriver
    - sudo apt-get install libpango1.0-0
    - sudo apt-get install firefox
  override:
