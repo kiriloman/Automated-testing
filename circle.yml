@@ -1,0 +1,17 @@
+machine:
+ ruby:
+   version: ruby-2.3.3
+ services:
+   - docker
+dependencies:
+ pre:
+   - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+   - sudo apt-get install jq nodejs curl -qy
+   - npm install -g geckodriver
+ override:
+   - rvm use .
+   - gem install bundler
+   - cd Functional/ui-functional-tests/; bundle install
+test:
+ override:
+   - cd gmail/cucumber; cucumber --tags @create_gmail_account
