@@ -6,9 +6,9 @@ require 'rspec'
 require 'faker'
 require 'selenium-webdriver'
 require 'site_prism'
-require 'httparty'
 require 'yaml'
+require 'httparty'
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox, :marionette => true)
+  Capybara::Selenium::Driver.new(app, :browser => :firefox)
 end
