@@ -1,4 +1,5 @@
 require 'fileutils'
+
 module Helper
     # Custom commands
     def mouse_over(element_selector)
