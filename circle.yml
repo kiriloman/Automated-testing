@@ -19,8 +19,7 @@ dependencies:
  override:
    - rvm use .
    - gem install bundler
-   - cd Functional/ui-functional-tests/; bundle install
+   - cd gmail/cucumber; bundle install
 test:
  override:
    - cd gmail/cucumber; cucumber --tags @create_gmail_account
- 
