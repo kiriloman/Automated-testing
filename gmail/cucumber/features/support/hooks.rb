@@ -1,3 +1,7 @@
+require_relative 'helper.rb'
+
+World(Helper)
+
 Before do
   Capybara.configure do |config|
     config.default_driver = :selenium
