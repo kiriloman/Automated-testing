@@ -1,3 +1,2 @@
-default: -p chrome
+default: -p firefox
 firefox: BROWSER=firefox
-chrome: BROWSER=chrome
