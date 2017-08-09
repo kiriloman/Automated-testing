@@ -5,6 +5,7 @@ World(Helper)
 Before do
   Capybara.configure do |config|
     config.default_driver = :selenium
+    config.app_host = 'https://www.gmail.com'
   end
   Capybara.current_driver = :selenium
   Capybara.javascript_driver = :selenium
