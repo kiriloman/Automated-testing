@@ -1,5 +1,5 @@
 # Automated Tests
-![alt text](https://circleci.com/gh/kiriloman/Automated-testing.svg?style=shield&circle-token=6fea71e94a26fcbd0b8d6530999ed22fd0ba8e33)
+
 
 Test Automation using Ruby with some shiny gems. The repository consists of 2 very simple examples (continente & stackoverflow) and 1 advanced (Gmail).
 
