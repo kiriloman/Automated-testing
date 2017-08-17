@@ -1,5 +1,6 @@
 # Automated Tests
 ![alt text](https://circleci.com/gh/kiriloman/Automated-testing.svg?style=shield&circle-token=:circle-token)
+
 Test Automation using Ruby with some shiny gems. The repository consists of a few examples
 
 ## Prerequisites
