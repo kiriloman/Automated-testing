@@ -10,10 +10,10 @@ class CreateAccount
   end
 
   def choose_create_account
-    expect(page).to have_css('.bdf4dc')
+    expect(page).to have_css '.bdf4dc'
     find(:xpath, '//div[@jsname="bCkDte"]').click
-    find(:xpath, '//content[@aria-label="Create account"]').click
-    find(:xpath, '//content[@aria-label="Create account"]').click
+    expect(page).to have_css '.PxpPTe.dCgGDe'
+    find('#SIGNUP').click
   end
 
   def fill_fields
@@ -32,13 +32,19 @@ class CreateAccount
     @new_account.phone.set($phone)
     @new_account.current_email.set($current_email)
     @new_account.location.click
+    country = page.all('.goog-menuitem')[7].text
     page.all('.goog-menuitem')[7].click
-    find(:css, '#submitbutton').click
+    expect(page).to have_content country
+    find('#submitbutton').click
   end
 
   def accept_terms
     expect(page).to have_content($terms)
-    find(:css, '#tos-scroll-button').click
-    find(:css, '#iagreebutton').click
+    find('#tos-scroll-button').click
+    find('#iagreebutton').click
+  end
+
+  def confirm
+    expect(page).to have_content 'Verify your account'
   end
 end

@@ -7,7 +7,6 @@ Before do
     config.default_driver = :selenium
     config.app_host = 'https://www.gmail.com'
   end
-  Capybara.current_driver = :selenium
   Capybara.javascript_driver = :selenium
   Capybara.default_max_wait_time = 20
 end

@@ -9,5 +9,5 @@ require 'site_prism'
 require 'yaml'
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
