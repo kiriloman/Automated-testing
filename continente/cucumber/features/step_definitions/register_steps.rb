@@ -8,6 +8,7 @@ When(/^I click on Novo Registo$/) do
 end
 
 When(/^fill in the fields$/) do
+  find(:css, '.closeCookiesFloating').click
   within '.questions' do
     fill_in 'DisplayName', with: 'KYS'
     fill_in 'Email', with: 'iaz6884sd2@tqosi.com'
@@ -24,16 +25,10 @@ end
 When(/^click on Completar Registo$/) do
   within '.suffixArea' do
     find(:css, '#btnRegisterSimple').click
-    #find(:xpath, '//input[@name="btnRegisterSimple"]').click
-    #click_on 'Completar registo'
   end
 end
 
 Then(/^my registration should be successfully completed$/) do
   page.has_css?('.confirmationArea', :text => 'iaz68842sd@tqosi.com', :visible => 'true')
   expect(page).to have_css '.confirmationArea'
-
-  @teste = "Kyrylo"
-
-  expect(@teste).to eq "Kyrylo"
 end
