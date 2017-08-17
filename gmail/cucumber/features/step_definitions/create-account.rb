@@ -13,5 +13,5 @@ When(/^fill in the fields$/) do
 end
 
 Then(/^my Gmail account should be successfully created$/) do
-  expect(page).to have_content 'Verify your account'
+  @create_acc.confirm
 end
